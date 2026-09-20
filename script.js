@@ -534,7 +534,7 @@ rewardCards.forEach(card=>{
     let bonusTimer;
     let bonusHolding=false;
 
-    card.addEventListener("mousedown",event=>{
+    card.addEventListener("pointerdown",event=>{
 
         if(!card.querySelector(".bonus-secret")||!card.classList.contains("revealed")){
             return;
@@ -565,12 +565,12 @@ rewardCards.forEach(card=>{
         },1000);
     });
 
-    card.addEventListener("mouseup",()=>{
+    card.addEventListener("pointerup",()=>{
         bonusHolding=false;
         clearTimeout(bonusTimer);
     });
 
-    card.addEventListener("mouseleave",()=>{
+    card.addEventListener("pointerleave",()=>{
         bonusHolding=false;
         clearTimeout(bonusTimer);
     });
